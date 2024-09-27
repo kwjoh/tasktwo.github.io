@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style/style.css">
+    
+    <script>
+        // JavaScript function to validate email match
+        function validateEmailMatch() {
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirm-email").value;
+
+            // Check if emails match
+            if (email !== confirmEmail) {
+                alert("The email addresses do not match. Please try again.");
+                return false; // Prevent form submission if emails don't match
+            }
+            return true; // Allow form submission if emails match
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <section>
+        <form action="submit-form.php" method="POST" onsubmit="return validateEmailMatch()">
+            <!-- First Name -->
+            <label for="first-name">First Name:</label><br>
+            <input type="text" id="first-name" name="first-name" required><br><br>
+
+            <!-- Last Name -->
+            <label for="last-name">Last Name:</label><br>
+            <input type="text" id="last-name" name="last-name" required><br><br>
+
+            <!-- Email -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Email Confirmation -->
+            <label for="confirm-email">Confirm Email Address:</label><br>
+            <input type="email" id="confirm-email" name="confirm-email" required><br><br>
+
+            <!-- Question -->
+            <label for="question">Your Question:</label><br>
+            <textarea id="question" name="question" rows="5" cols="40" required></textarea><br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="information">
+            <h2>For More Information</h2>
+            <a href="https://www.austintexas.org/" target="_blank">Visit Austin</a>
+            <a href="https://www.discovertemple.com/" target="_blank">Visit Temple</a>
+            <a href="https://cityofholland.org/" target="_blank">Visit Holland</a>
+        </div>
+    </section>
+
+    <aside>
+        <h2 class="back">Go back</h2>
+        <ul>
+            <li><a href="Temple.html">Temple</a></li>
+            <li><a href="Holland.html">Holland</a></li>
+            <li><a href="Austin.html">Austin</a></li>
+        </ul>
+    </aside>
+
+</body>
+</html>
