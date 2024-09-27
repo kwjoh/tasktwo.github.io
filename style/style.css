@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "section aside";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: rgb(241, 136, 227);
+    background-image: url("https://img.freepik.com/premium-vector/texas-state-flag-brush-style-transparent-background-vector-illustration_601298-9888.jpg?w=1380");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+header {
+    grid-area: header;
+    background-color: #6bc4f8;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+nav {
+    grid-area: nav;
+    background-color: #eb7474;
+    padding: 5px;
+    
+}
+section {
+    grid-area: section;
+    background-color: none;
+    padding: 10px;
+    color: white;
+    
+    
+}
+aside {
+    grid-area: aside;
+    background-color: none;
+    padding: 10px;
+    color: rgb(195, 191, 214);
+}
+
+li{
+    color: whitesmoke;
+}
+
+a{
+    color: white;
+    
+}
+a:hover{
+    color: rgb(112, 236, 39);
+}
+
+table, th, td{
+    color: white;
+    border: 2px solid white;
+    border-collapse: collapse;
+
+}
+.eats{
+    color: rgb(143, 241, 217);
+}
+.fun{
+    color: #6bc4f8;
+}
+#explore{
+    color: #6bc4f8;
+}
+
+.information{
+    float: right;
+    color: aqua;
+    margin-right: 250px;
+    padding-top: 500px;
+}
